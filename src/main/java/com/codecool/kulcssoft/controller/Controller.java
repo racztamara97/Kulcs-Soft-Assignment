@@ -46,4 +46,10 @@ public class Controller {
         return "redirect:/";
     }
 
+    @PostMapping("/search")
+    public String search(@RequestParam(value = "search") String search, Model model) {
+        model.addAttribute("users", userRepository.findAllByUserNameContaining(search));
+        return "index";
+    }
+
 }
