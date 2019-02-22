@@ -39,31 +39,29 @@
                         <td th:text="${user.userEmail}">vote</td>
                         <td>
                             <form action="#" th:action="@{/delete_user}" th:object="${user}" method="post">
-                                <button class="btn btn-success" type="submit"> <!--data-toggle="modal"
-                                        data-target="#deleteModal"-->Delete
+                                <button class="btn btn-success" type="button" data-toggle="modal"
+                                        data-target="#deleteModal">Delete
                                 </button>
                                 <input type="hidden" name="userButton" th:value="${user.UserId}">
-                                <!--<div class="modal fade" id="currentTimeModal" tabindex="-1" role="dialog"
+                                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
                                      aria-labelledby="deleteModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="deleteModalLabel">Warning!</h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Are you sure to delete this user?</p>
+                                                <p>Are you sure you want to delete this user?</p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="submit" class="btn btn-danger">Delete</button>
-                                                <input type="hidden" name="userButton" th:value="${user.UserId}">
+                                                <button type="submit" class="btn btn-danger">Delete user</button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>-->
+                                </div>
                             </form>
                         </td>
                     </tr>
