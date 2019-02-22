@@ -10,40 +10,40 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer UserId;
-    private String UserName;
-    private String UserEmail;
+    private Integer userId;
+    private String userName;
+    private String userEmail;
 
     public User() {
     }
 
     public User(String userName, String userEmail) {
-        UserName = userName;
-        UserEmail = userEmail;
+        this.userName = userName;
+        this.userEmail = userEmail;
     }
 
     public Integer getUserId() {
-        return UserId;
+        return userId;
     }
 
     public void setUserId(Integer userId) {
-        UserId = userId;
+        this.userId = userId;
     }
 
     public String getUserName() {
-        return UserName;
+        return userName;
     }
 
     public void setUserName(String userName) {
-        UserName = userName;
+        this.userName = userName;
     }
 
     public String getUserEmail() {
-        return UserEmail;
+        return userEmail;
     }
 
     public void setUserEmail(String userEmail) {
-        UserEmail = userEmail;
+        this.userEmail = userEmail;
     }
 }
 
